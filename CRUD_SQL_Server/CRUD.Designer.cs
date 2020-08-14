@@ -95,14 +95,20 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 159);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(775, 261);
             this.dataGridView1.TabIndex = 6;
             // 
             // button1
             // 
+            this.button1.AccessibleName = "Agregar";
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(11, 96);
             this.button1.Name = "button1";
@@ -111,9 +117,11 @@
             this.button1.Text = "Agregar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.buttons_Click);
             // 
             // button2
             // 
+            this.button2.AccessibleName = "Actualizar";
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(84, 96);
             this.button2.Name = "button2";
@@ -122,9 +130,11 @@
             this.button2.Text = "Actualizar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.buttons_Click);
             // 
             // button3
             // 
+            this.button3.AccessibleName = "Eliminar";
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(157, 96);
             this.button3.Name = "button3";
@@ -133,6 +143,7 @@
             this.button3.Text = "Eliminar";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.buttons_Click);
             // 
             // label4
             // 
@@ -152,12 +163,14 @@
             // 
             // button4
             // 
+            this.button4.AccessibleName = "Buscar";
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(767, 133);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(20, 20);
             this.button4.TabIndex = 13;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.buttons_Click);
             // 
             // CRUD
             // 
@@ -179,6 +192,8 @@
             this.Controls.Add(this.label1);
             this.Name = "CRUD";
             this.Text = "CRUD";
+            this.Load += new System.EventHandler(this.CRUD_Load);
+            this.Resize += new System.EventHandler(this.CRUD_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

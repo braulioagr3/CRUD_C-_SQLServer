@@ -52,6 +52,12 @@
     <Compile Include="CRUD.Designer.cs">
       <DependentUpon>CRUD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nexo.cs" />
+    <Compile Include="PersonaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CRUD.resx">
@@ -66,6 +72,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="PersonaDataSet.xsc">
+      <DependentUpon>PersonaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PersonaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PersonaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PersonaDataSet.xss">
+      <DependentUpon>PersonaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
