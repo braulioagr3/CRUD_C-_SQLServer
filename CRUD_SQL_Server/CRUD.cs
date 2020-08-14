@@ -43,8 +43,16 @@ namespace CRUD_SQL_Server
             {
                 case "Agregar":
                     #region Agregar
+                    //Damos formato a la consulta SQL
+                    consulta = "insert into Alumno(nombre, apellido, edad) values ('"+textBoxNombre.Text+"','"+textBoxApellido.Text+"'," +textBoxEdad.Text+")";
+                    //MAndamos limpiar los textbox
+                    this.limpiaTextBox();
+                    //Ejecutamos los comandosSQL
+                    nexo.ejecutarSQL(consulta);
+                    //Actualizamos el data grid
+                    nexo.actualizaGrid(this.dataGridView1, "select * from Alumno");
                     #endregion
-                break;
+                    break;
                 case "Actualizar":
                     #region Actualizar
                     #endregion
@@ -58,6 +66,13 @@ namespace CRUD_SQL_Server
                     #endregion
                 break;
             }
+        }
+
+        private void limpiaTextBox()
+        {
+            textBoxNombre.Text = "";
+            textBoxApellido.Text = "";
+            textBoxEdad.Text = "";
         }
         #endregion
 

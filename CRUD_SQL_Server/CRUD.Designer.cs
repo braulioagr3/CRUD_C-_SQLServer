@@ -34,7 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.textBoxApellido = new System.Windows.Forms.TextBox();
-            this.textBoxEstado = new System.Windows.Forms.TextBox();
+            this.textBoxEdad = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -68,9 +68,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(11, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Estado";
+            this.label3.Text = "Edad";
             // 
             // textBoxNombre
             // 
@@ -86,12 +86,12 @@
             this.textBoxApellido.Size = new System.Drawing.Size(190, 20);
             this.textBoxApellido.TabIndex = 4;
             // 
-            // textBoxEstado
+            // textBoxEdad
             // 
-            this.textBoxEstado.Location = new System.Drawing.Point(61, 70);
-            this.textBoxEstado.Name = "textBoxEstado";
-            this.textBoxEstado.Size = new System.Drawing.Size(190, 20);
-            this.textBoxEstado.TabIndex = 5;
+            this.textBoxEdad.Location = new System.Drawing.Point(61, 70);
+            this.textBoxEdad.Name = "textBoxEdad";
+            this.textBoxEdad.Size = new System.Drawing.Size(190, 20);
+            this.textBoxEdad.TabIndex = 5;
             // 
             // dataGridView1
             // 
@@ -184,7 +184,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBoxEstado);
+            this.Controls.Add(this.textBoxEdad);
             this.Controls.Add(this.textBoxApellido);
             this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.label3);
@@ -207,7 +207,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.TextBox textBoxApellido;
-        private System.Windows.Forms.TextBox textBoxEstado;
+        private System.Windows.Forms.TextBox textBoxEdad;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
