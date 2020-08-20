@@ -75,7 +75,6 @@ namespace CRUD_SQL_Server
                         //Habilitamos los botones para poder volver a operar
                         this.button1.Enabled = true;
                         this.button3.Enabled = true;
-                        this.button4.Enabled = true;
                         //Limpiamos los textbox y bajamos la bandera
                         this.limpiaTextBox();
                         this.band = false;
@@ -92,7 +91,6 @@ namespace CRUD_SQL_Server
                         //Deshabilitamos los botones para que no se pueda hacer niguna operacion y levantamos la bandera
                         this.button1.Enabled = false;
                         this.button3.Enabled = false;
-                        this.button4.Enabled = false;
                         this.band = true;
                     }
                     #endregion
@@ -129,8 +127,6 @@ namespace CRUD_SQL_Server
             this.label4.Location = point;
             point = new Point(this.Width - 242, this.textBox1.Location.Y);
             this.textBox1.Location = point;
-            point = new Point(this.textBox1.Location.X + 193, this.button4.Location.Y);
-            this.button4.Location = point;
         }
 
         #endregion
@@ -144,5 +140,10 @@ namespace CRUD_SQL_Server
             textBoxEdad.Text = "";
         }
 
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            //Mandamos actualizar el data grid con una consulta que permita realizar busqueda por nombre
+            this.nexo.actualizaGrid(this.dataGridView1, "select * from Alumno where nombre like '" + this.textBox1.Text +"%';");
+        }
     }
 }
