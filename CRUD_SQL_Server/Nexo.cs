@@ -11,6 +11,7 @@ namespace CRUD_SQL_Server
 {
     class Nexo
     {
+        
         #region variables de instancia
         SqlConnection sqlConnection;
         #endregion
@@ -75,7 +76,7 @@ namespace CRUD_SQL_Server
          * Este metodo se encarga de llenar el datagrid 
          * 
          */
-        public void actualizaGrid(DataGridView dataGridView, string consutla)
+        public void actualizaGrid(DataGridView dataGridView, string consulta)
         {
             //Cache de datos en memoria
             DataSet dataSet;
@@ -88,7 +89,7 @@ namespace CRUD_SQL_Server
 
 
             //Inicializamos el adaptador con el comando SQL que deseamos realizar y con el objeto que tiene nuestro enlace
-            sqlDataAdapter = new SqlDataAdapter(consutla, this.sqlConnection);
+            sqlDataAdapter = new SqlDataAdapter(consulta, this.sqlConnection);
 
             //Utilizamos el metodo Fill para ejecutar el comando SQL y se ordenene en la variable dataSet
             sqlDataAdapter.Fill(dataSet, "Alumno");
@@ -102,5 +103,6 @@ namespace CRUD_SQL_Server
 
         }
         #endregion
+    
     }
 }

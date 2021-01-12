@@ -95,10 +95,6 @@ namespace CRUD_SQL_Server
                     }
                     #endregion
                     break;
-                case "Buscar":
-                    #region Buscar
-                    #endregion
-                break;
                 case "Eliminar":
                     #region Eliminar
                     //Obtenemos el id de la fila seleccionada  y lo guaramos en la variable
